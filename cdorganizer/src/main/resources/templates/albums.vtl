@@ -1,0 +1,15 @@
+<h1>Your Collection</h1>
+#if ($cds)
+  <ol>
+    #foreach ($cd in $cds)
+      <li><ul>
+        <li>Artist: $cd.getArtist()</li>
+        <li>Album: $cd.getAlbum()</li>
+        <li>Year: $cd.getYear()</li>
+        <li>Description: $cd.getDescription()</li>
+      </ul></li>
+    #end
+  </ol>
+#else
+  <p>No CDs!</p>
+#end
